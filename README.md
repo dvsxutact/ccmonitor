@@ -18,6 +18,7 @@ Mining Software Supported
 - cpuminer
 - sgminer
 
+*NOTE: asic miners (such as antminer etc.) are not supported as of right now, as i dont have access to any asic miners!
 
 =================================
 Description
