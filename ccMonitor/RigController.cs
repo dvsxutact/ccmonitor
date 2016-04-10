@@ -59,8 +59,7 @@ namespace ccMonitor
                 }
                 else
                 {
-                    Tuple<long, bool, bool> prevAvailableTimeStamp =
-                        AvailableTimeStamps[AvailableTimeStamps.Count - 1];
+                    Tuple<long, bool, bool> prevAvailableTimeStamp = AvailableTimeStamps[AvailableTimeStamps.Count - 1];
                     if (prevAvailableTimeStamp.Item1 != unixTimeStamp && prevAvailableTimeStamp.Item2 != available)
                     {
                         AvailableTimeStamps.Add(new Tuple<long, bool, bool>(unixTimeStamp, available, monitorClosing));

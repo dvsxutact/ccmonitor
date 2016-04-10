@@ -58,32 +58,32 @@ namespace ccMonitor.Gui
 
         private void RemoveDeletedRigs()
         {
-            // Really complicated way to dynamically remove deleted rigs
-            // Need to find a better way
-            Dictionary<string, bool> rigExistence = new Dictionary<string, bool>();
-            foreach (TabPage tabPage in tbcMonitor.TabPages)
-            {
-                // Adds all tabs to a dict with def value false, except if it's the tab already there
-                rigExistence.Add(tabPage.Text, tabPage == tabGeneral);
-            }
+            //// Really complicated way to dynamically remove deleted rigs
+            //// Need to find a better way
+            //Dictionary<string, bool> rigExistence = new Dictionary<string, bool>();
+            //foreach (TabPage tabPage in tbcMonitor.TabPages)
+            //{
+            //    // Adds all tabs to a dict with def value false, except if it's the tab already there
+            //    rigExistence.Add(tabPage.Text, tabPage == tabGeneral);
+            //}
 
-            foreach (RigController.Rig rig in _controller.RigLogs)
-            {
-                if (rig.UserFriendlyName != null && rigExistence.ContainsKey(rig.UserFriendlyName))
-                {
-                    // If it exists in both the controller logs and in the tabs, it's value should be made true 
-                    rigExistence[rig.UserFriendlyName] = true;
-                }
-            }
+            //foreach (RigController.Rig rig in _controller.RigLogs)
+            //{
+            //    if (rig.UserFriendlyName != null && rigExistence.ContainsKey(rig.UserFriendlyName))
+            //    {
+            //        // If it exists in both the controller logs and in the tabs, it's value should be made true 
+            //        rigExistence[rig.UserFriendlyName] = true;
+            //    }
+            //}
 
-            foreach (TabPage tabPage in tbcMonitor.TabPages)
-            {
-                if (rigExistence[tabPage.Text] == false)
-                {
-                    // Remove it if it's not in the controller logs anymore
-                    tbcMonitor.TabPages.Remove(tabPage);
-                }
-            }
+            //foreach (TabPage tabPage in tbcMonitor.TabPages)
+            //{
+            //    if (rigExistence[tabPage.Text] == false)
+            //    {
+            //        // Remove it if it's not in the controller logs anymore
+            //        tbcMonitor.TabPages.Remove(tabPage);
+            //    }
+            //}
         }
 
         private void UpdateGui()
@@ -227,9 +227,7 @@ namespace ccMonitor.Gui
 
         private void LoadLogs()
         {
-            _controller = File.Exists("logs.gz")
-                ? new RigController(JsonControl.GetSerializedGzipFile<BindingList<RigController.Rig>>("logs.gz"))
-                : new RigController();
+            _controller = File.Exists("logs.gz") ? new RigController(JsonControl.GetSerializedGzipFile<BindingList<RigController.Rig>>("logs.gz")) : new RigController();
         }
 
 
@@ -403,6 +401,11 @@ namespace ccMonitor.Gui
                 screenImage.Save(GuiHelper.GetCurrentUnixTimeStamp() + ".png", ImageFormat.Png);
             }
             
+        }
+
+        private void scGeneral_Panel2_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }

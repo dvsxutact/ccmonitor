@@ -1,0 +1,7 @@
+*.exe
+*.pdb
+*.resources
+ccMonitor/obj/Debug/ccMonitor.csproj.FileListAbsolute.txt
+*.Cache
+ccMonitor/obj/Debug/TempPE/Properties.Resources.Designer.cs.dll
+*.txt
