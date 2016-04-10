@@ -1,0 +1,1 @@
+C:\Development\Git\ccmonitor\ccMonitor\bin\Debug\ccMonitor.exe.config
