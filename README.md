@@ -8,9 +8,8 @@ Base code forked from: https://github.com/KBomba/ccmonitor
 =================================
 Requirements
 =================================
-Windows 7 or later (7, 8, 8.1, 10)
-
-.NET Framework 4.5
+- Windows 7 or later (7, 8, 8.1, 10)
+- .NET Framework 4.5
 
 =================================
 Mining Software Supported
@@ -42,10 +41,7 @@ Contributions
 
 If you like my work, please consider donating to keep the project alive!
 
-BTC: 1CRHydXV8qt1NdPp1BFu7dAfyeoVYzp46s
-
-LTC: LSoqF2e3mcqzgpxQJjPs92WUXmQqBucSUD
-
-Dash: XvNSquNMLk2gXALXJqtMXdfGhT1fPVY4G2
-
-Start: sLWjjfWzwN8XwCvDcZqcf76WPQkYE4x7n1
+- BTC: 1CRHydXV8qt1NdPp1BFu7dAfyeoVYzp46s
+- LTC: LSoqF2e3mcqzgpxQJjPs92WUXmQqBucSUD
+- Dash: XvNSquNMLk2gXALXJqtMXdfGhT1fPVY4G2
+- Start: sLWjjfWzwN8XwCvDcZqcf76WPQkYE4x7n1
